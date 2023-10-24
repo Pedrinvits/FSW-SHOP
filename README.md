@@ -33,5 +33,5 @@ Este é o repositório oficial do e-commerce desenvolvido durante a Full Stack W
 - **Pagamento do Pedido com a API do Stripe**: Oferecemos uma experiência segura de pagamento online com a integração da API do Stripe, incluindo o uso de webhooks para processar eventos relacionados ao pagamento. Os usuários podem concluir seus pedidos com facilidade e segurança.
 
 ## Protótipo no Figma 🎨
-[aqui](https://www.figma.com/file/Y8jmabSZXxAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1).
+(https://www.figma.com/file/Y8jmabSZXxAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1)
 
