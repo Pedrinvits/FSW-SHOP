@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "./badge";
 import { ArrowDownIcon } from "lucide-react";
 import DiscountBagde from "./discount-badge";
+import { cn } from "@/lib/utils";
 // import DiscountBadge from "./discount-badge";
 
 interface ProductItemProps {
@@ -21,10 +22,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
             height={0}
             width={0}
             sizes="100vw"
-            className="h-auto max-h-[70%] w-auto max-w-[80%]"
-            style={{
-              objectFit: "contain",
-            }}
+            className="h-auto max-h-[70%] w-auto max-w-[80%] object-contain"
             alt={product.name}
           />
          {product.discountPercentage > 0 && (
