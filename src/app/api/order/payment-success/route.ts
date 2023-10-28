@@ -22,10 +22,11 @@ export const POST = async (request: Request) => {
     process.env.STRIPE_WEBHOOK_SECRET_KEY,
   );
 
-    //esse event.type podemos pegar se a pessoa abandou o carrinho e fazer uma serie de coisas com isso
+  //esse event.type podemos pegar se a pessoa abandou o carrinho e fazer uma serie de coisas com isso
     // por ex: mandar email etc ...
   if (event.type === "checkout.session.completed") {
     // se isso aqui for chamado é porque realmente o pedido foi feito
+    const session = event.data.object as any;
     const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
       event.data.object.id,
       {
@@ -33,8 +34,16 @@ export const POST = async (request: Request) => {
       },
     );
     const lineItems = sessionWithLineItems.line_items;
-  
-    // CRIAR PEDIDO a partir do lineItems
+
+    // ATUALIZAR PEDIDO
+    await prismaClient.order.update({
+      where: {
+        id: session.metadata.orderId,
+      },
+      data: {
+        status: "PAYMENT_CONFIRMED",
+      },
+    });
   }
 
   return NextResponse.json({ received: true });
