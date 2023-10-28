@@ -136,7 +136,7 @@ const Header = () => {
 
       <Link href="/">
         <h1 className="text-lg font-semibold">
-          <span className="text-primary">FSW</span> Store
+          <span className="text-primary">FSW</span> Shop
         </h1>
       </Link>
 
