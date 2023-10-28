@@ -9,11 +9,21 @@ import { ScrollArea } from "@radix-ui/react-scroll-area"
 import { Button } from "./button"
 import { createCheckout } from "@/actions/checkout"
 import { loadStripe } from "@stripe/stripe-js"
-
+import { useSession } from "next-auth/react";
+import { CreateOrder } from "@/actions/order"
 const Cart = () => {
     const { products, subtotal, total, totalDiscount } = useContext(CartContext)
+    const { data } = useSession();
 
     const handleFinishPurchase = async () => {
+        // criando o pedido antes de direcionar para o stripe
+       if (!data?.user) {
+            // usario nao esta autenticado e quer finalizar a compra
+            // podemos redirecionar para o login
+            return;
+       }
+       const order = await CreateOrder(products, (data?.user as any).id);
+       
         const checkout = await createCheckout(products)
         const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
