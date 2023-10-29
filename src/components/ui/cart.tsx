@@ -40,7 +40,7 @@ const Cart = () => {
                 Carrinho
             </Badge>
             <div className="flex flex-col gap-5 h-full overflow-hidden">
-               <ScrollArea className="h-full gap-8">
+               <ScrollArea className="h-full flex flex-col gap-8">
                {products.length > 0 ? (
                     products.map(product => (
                         <CartItem product={computeProductTotalPrice(product) as any} key={product.id}/>
