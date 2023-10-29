@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 async function OrderPage ()  {
     const session = await getServerSession(authOptions);
-    console.log(session?.user.id)
+
     if (!session || !session.user) {
         return (
           <div className="flex h-full flex-col items-center justify-center gap-2 p-5">
