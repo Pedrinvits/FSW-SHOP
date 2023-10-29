@@ -16,8 +16,8 @@ const ProductImage = ({imageUrls,name} : ProductImageProps) => {
     }
 
     return ( 
-        <div className="flex flex-col">
-            <div className="bg-accent items-center justify-center w-full flex h-[380px]">
+        <div className="flex flex-col lg:min-h-full lg:w-3/5">
+            <div className="flex h-[380px] w-full items-center justify-center bg-accent lg:h-full lg:rounded-lg">
                 <Image 
                 src={currentImage} 
                 alt={name} 
@@ -28,24 +28,27 @@ const ProductImage = ({imageUrls,name} : ProductImageProps) => {
                 />
             </div>
 
-            <div className="grid grid-cols-4 gap-4 m-8 px-5">
-                {imageUrls.map(imageUrl => (
-                    <button className={
-                                
-                        `bg-accent rounded-lg flex justify-center items-center h-[100px]
-                                ${imageUrl == currentImage && 'border-2 border-solid border-primary'}`
-                                
-                            } key={imageUrl} onClick={()=>handleImageClick(imageUrl)}>
-                            <Image
-                                src={imageUrl} 
-                                alt={name} 
-                                width={0} 
-                                height={0} 
-                                sizes="100vw" 
-                                className="h-auto max-h-[70%] w-auto max-w-[80%]" 
-                            />
-                            
-                    </button>
+            <div className="mt-8 grid grid-cols-4 gap-4 px-5 lg:px-0">
+                {imageUrls.map((imageUrl) => (
+                <button
+                    key={imageUrl}
+                    className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
+                        ${
+                        imageUrl === currentImage &&
+                        "border-2 border-solid border-primary"
+                        }
+                    `}
+                    onClick={() => handleImageClick(imageUrl)}
+                >
+                    <Image
+                    src={imageUrl}
+                    alt={name}
+                    height={0}
+                    width={0}
+                    sizes="100vw"
+                    className="h-auto max-h-[70%] w-auto max-w-[80%]"
+                    />
+                </button>
                 ))}
             </div>
         </div>

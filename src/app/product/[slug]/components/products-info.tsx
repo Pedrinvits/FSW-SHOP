@@ -29,18 +29,18 @@ const ProductsInfo = ( { product } : ProductsInfoProps) => {
         addProductToCart({...product, quantity})
     }
     return ( 
-        <div className="flex flex-col px-5">
-            <h2 className="text-lg">{product.name}</h2>
+        <div className="flex flex-col px-5 lg:w-[40%] lg:rounded-lg lg:bg-accent lg:p-10">
+            <h2 className="text-lg lg:text-2xl">{product.name}</h2>
             <div className="flex items-center gap-2">
-                <h1 className="text-xl font-bold">R$ {product.totalPrice.toFixed(2)}</h1>
+                <h1 className="text-xl font-bold lg:text-3xl">R$ {product.totalPrice.toFixed(2)}</h1>
                 {product.discountPercentage > 0 && (
-                    <DiscountBagde>
+                    <DiscountBagde className="lg:text-base">
                         {product.discountPercentage} 
                     </DiscountBagde>
                 )}
             </div>
             {product.discountPercentage > 0 && (
-                <p className="text-sm line-through opacity-75">R$ {Number(product.basePrice).toFixed(2)}</p>
+                <p className="text-sm line-through opacity-75 lg:text-base">R$ {Number(product.basePrice).toFixed(2)}</p>
             )}
 
             <div className="flex items-center mt-4 gap-2">
@@ -64,7 +64,7 @@ const ProductsInfo = ( { product } : ProductsInfoProps) => {
                 Adicionar ao carrinho
             </Button>
 
-            <div className="bg-accent flex items-center px-5 py-2 justify-between mt-5 rounded-lg">
+            <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-5 py-2 lg:bg-[#2A2A2A]">
                 <div className="flex items-center gap-2">
                     <TruckIcon/>
                     <div className="flex flex-col">
