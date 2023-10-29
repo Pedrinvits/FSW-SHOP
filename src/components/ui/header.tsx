@@ -59,7 +59,7 @@ const Header = () => {
 
           {status === "authenticated" && data?.user && (
             <div className="flex flex-col">
-              <div className="flex items-center gap-2 py-4">
+              <div className="flex items-center gap-4 py-4">
                 <Avatar>
                   <AvatarFallback>
                     {data.user.name?.[0].toUpperCase()}
