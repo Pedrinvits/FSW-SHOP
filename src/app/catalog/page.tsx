@@ -9,12 +9,12 @@ const CatalogPage = async () => {
   
   return (
     <div className="p-5 gap-8 flex flex-col">
-      <Badge className="gap-1 text-base uppercase border-primary px-3 py-[0.375rem] border-2 w-fit" variant={"outline"}>
+      <Badge className="inline-flex items-center rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground w-fit gap-1 border-2 border-primary px-3 py-[0.375rem] text-base lg:text-lg uppercase" variant={"outline"}>
         <ShapesIcon/>
         Catálogo
       </Badge>
 
-      <div className="flex flex-col flex-wrap gap-8">
+      <div className="grid lg:grid-cols-2 gap-8 lg:container lg:gap-10">
         {categories.map(category => (
           <CategoryItem category={category} key={category.id} />
         ))}

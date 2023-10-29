@@ -39,7 +39,7 @@ async function OrderPage ()  {
                 Meus Pedidos
             </Badge>
 
-            <div className="mt-5 flex flex-col gap-5">
+            <div className="mt-5 flex flex-col gap-5 lg:container lg:gap-10">
                 {orders.map((order) => (
                     <OrderItem key={order.id} order={order} />
                 ))}
