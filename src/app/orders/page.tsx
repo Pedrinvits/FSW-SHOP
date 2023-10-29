@@ -13,8 +13,7 @@ async function OrderPage ()  {
     if (!session || !session.user) {
         return (
           <div className="flex h-full flex-col items-center justify-center gap-2 p-5">
-            <h2 className="font-bold">Acesso Negado!</h2>
-            <p className="text-sm opacity-60">Faça login para ver seus pedidos</p>
+            <h2 className="text-xl font-bold lg:text-3xl">Faça login para ver seus pedidos !</h2>
           </div>
         );
       }

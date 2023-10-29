@@ -11,6 +11,7 @@ import { createCheckout } from "@/actions/checkout"
 import { loadStripe } from "@stripe/stripe-js"
 import { useSession } from "next-auth/react";
 import { CreateOrder } from "@/actions/order"
+import { toast } from 'react-hot-toast'
 const Cart = () => {
     const { products, subtotal, total, totalDiscount } = useContext(CartContext)
     const { data } = useSession();
@@ -19,7 +20,7 @@ const Cart = () => {
         // criando o pedido antes de direcionar para o stripe
        if (!data?.user) {
             // usario nao esta autenticado e quer finalizar a compra
-            // podemos redirecionar para o login
+            toast.success('Faça Login para comprar !')
             return;
        }
         const order = await CreateOrder(products, (data?.user as any).id);

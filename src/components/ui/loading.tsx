@@ -1,10 +1,14 @@
 import { Skeleton } from "./skeleton";
-
+import "../../app/loading.css";
 const LoadingPage = () => {
   return (
-    <div className="flex w-full flex-1 flex-col items-center p-[50%] px-20">
-      <div className="mt-12 w-[100%] animate-pulse flex-row items-center justify-center space-x-1 rounded-xl border p-6">
-        <Skeleton className="h-6 w-[100%] rounded-md bg-gray-300" />
+    <div className="flex items-center p-[50%] px-20 justify-center">
+      <div className="mt-12 w-[100%] flex-row items-center justify-center flex">
+        <div className="three-body">
+          <div className="three-body__dot"></div>
+          <div className="three-body__dot"></div>
+          <div className="three-body__dot"></div>
+        </div>
       </div>
     </div>
   );
