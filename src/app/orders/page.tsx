@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 async function OrderPage ()  {
     const session = await getServerSession(authOptions);
-
+    console.log(session?.user.id)
     if (!session || !session.user) {
         return (
           <div className="flex h-full flex-col items-center justify-center gap-2 p-5">
@@ -21,7 +21,7 @@ async function OrderPage ()  {
     //pegando as orders do usuario
     const orders = await prismaClient.order.findMany({  
         where : {
-            userId : (session as any).id,
+            userId : (session as any).user.id,
         },
         include : {
             orderProducts : {
