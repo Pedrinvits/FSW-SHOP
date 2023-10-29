@@ -24,10 +24,7 @@ const ProductImage = ({imageUrls,name} : ProductImageProps) => {
                 width={0} 
                 height={0} 
                 sizes="100vw" 
-                className="h-auto max-h-[70%] w-auto max-w-[80%]" 
-                style = {{
-                    objectFit : "contain",
-                }}
+                className="h-auto max-h-[70%] w-auto max-w-[80%] object-contain"
                 />
             </div>
 
@@ -46,9 +43,6 @@ const ProductImage = ({imageUrls,name} : ProductImageProps) => {
                                 height={0} 
                                 sizes="100vw" 
                                 className="h-auto max-h-[70%] w-auto max-w-[80%]" 
-                                style = {{
-                                    objectFit : "contain",
-                                }}
                             />
                             
                     </button>
