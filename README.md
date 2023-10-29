@@ -1,8 +1,4 @@
-# Projeto Full Stack Week 2.0 💻
-
-Este é o repositório oficial do e-commerce desenvolvido durante a Full Stack Week, um evento diferente de tudo que você já viu, com 4 lives de muito conteúdo. Nosso objetivo principal é criar um projeto altamente relevante, utilizando as tecnologias mais modernas e demandadas pelo mercado, a fim de adicionar autoridade ao currículo de desenvolvedor.
-
-## Tecnologias Utilizadas 🚀
+## Tecnologias Utilizadas 
 
 - **React**: Uma biblioteca JavaScript popular para construir interfaces de usuário interativas.
 
@@ -20,7 +16,7 @@ Este é o repositório oficial do e-commerce desenvolvido durante a Full Stack W
 
 - **API do Stripe**: Uma API de pagamento popular para processar pagamentos online de forma segura.
 
-## Funcionalidades 📦
+## Funcionalidades 
 
 - **Login com o Google**: Permitimos que os usuários façam login usando suas contas do Google para uma experiência de autenticação simplificada.
 
@@ -31,7 +27,4 @@ Este é o repositório oficial do e-commerce desenvolvido durante a Full Stack W
 - **Gerenciamento do Carrinho de Compras**: Os usuários podem adicionar produtos ao seu carrinho de compras, remover produtos e também modificar a quantidade de um produto no carrinho de compras conforme necessário.
 
 - **Pagamento do Pedido com a API do Stripe**: Oferecemos uma experiência segura de pagamento online com a integração da API do Stripe, incluindo o uso de webhooks para processar eventos relacionados ao pagamento. Os usuários podem concluir seus pedidos com facilidade e segurança.
-
-## Protótipo no Figma 🎨
-(https://www.figma.com/file/Y8jmabSZXxAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1)
 
