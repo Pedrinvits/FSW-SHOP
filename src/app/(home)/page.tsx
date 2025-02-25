@@ -36,10 +36,11 @@ export default async function Home() {
   return (
     <>
     <div className="mx-auto flex flex-col gap-8 py-8 lg:container lg:gap-10">
-      <Link href={'/deals'}>
+      <Link href={'/deals'} className="flex justify-center">
         <PromoBanner 
           src='/banner-home-01.png' 
           alt="Até 55% de desconto"
+          className="w-[96%]"
         />
       </Link>
       <div className="p-5">
